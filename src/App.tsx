@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { Counter, decrement, increment } from './features/counters/countersSlice';
+import  News  from './components/News.tsx';
 
 function App() {
-  const [count, setCount] = useState(0)
   const counters: Counter[] = useSelector((state: { counters: Counter[] }) => state.counters);
   const dispatch = useDispatch();
   const handleIncrement = (id: number) => {
@@ -15,7 +14,7 @@ function App() {
   }
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Vite + React Redux + Toolkit</h1>
       {
         counters.map((counter: Counter) => (
           <div key={counter.id}>
@@ -26,7 +25,9 @@ function App() {
           </div>
         ))
       }
-     
+     <hr />
+     <h1>News Data</h1>
+     <News/>
     </>
   )
 }

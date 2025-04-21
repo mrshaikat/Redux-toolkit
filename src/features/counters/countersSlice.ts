@@ -2,8 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [
         {id: 1, value: 1},
-        {id: 2, value: 2},
-        {id: 3, value: 3},
+        {id: 2, value: 2}
     ];
 
 export interface Counter {
